@@ -1,0 +1,247 @@
+@import "bootstrap";
+@import "mixins";
+
+//Bootstrap Overrides
+@table-bg-accent: #074B83;
+
+@border-color: #904F4F;
+
+html, body{
+	height:100%;
+	width:100%;
+	min-height:100%;
+	margin:0;
+	padding:0;
+}
+
+body{
+	min-width:1000px;
+	background:#004680;
+	color:#CCC;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+}
+
+
+.stats{
+	color:#7F93B1;
+}
+
+.header{
+
+	.header-align, .header-content{
+		display:inline-block;
+		vertical-align:middle;
+		float:none;
+	}
+	.header-align{
+		height:21vh;
+	}
+
+
+	img#team-logo{
+		width:90px;
+	}
+
+	#countdown{
+		font-size:4em;
+		font-weight:100;
+		opacity:0.3;
+		padding-top:15px;
+	}
+
+	img.player-img{
+		width:90px;
+		height:90px;
+		border-radius:50%;
+	}
+	img.player-img:after {
+		content: "";
+		width: 100%;
+		background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, #FFF 70%, #FFF 100%);
+		height: 100%;
+		display: block;
+		position: absolute;
+	}
+	strong.pitcher-name{
+		color:#EEE;
+	}
+
+	&#current-game{
+
+		h1.team-score{
+			margin:0;
+			padding:0;
+			font-size:9em;
+			line-height:0.8;
+			opacity:0.2;
+		}
+
+		.bso-table{
+			width:100px;
+		}
+	}
+
+  	.at-bat{
+	  height:40px;
+	  overflow:hidden;
+	}
+
+	table.bases{
+		border-spacing:5px;
+		border-collapse:separate;
+		.rotation(45deg);
+
+		td{
+			width:10px;
+			height:12px;
+			border:1px solid #41698A !important;
+
+			&.active{
+				background:#B1B117;
+			}
+		}
+	}
+
+	table.bso{
+		text-align:left;
+
+		td{
+			padding:0px 3px !important;
+
+			span {
+				display:inline-block;
+				margin:0 3px;
+				width: 10px;
+				height: 10px;
+				border: 1px solid #41698A !important;
+				border-radius: 5px;
+
+				&.active {
+
+				}
+			}
+
+			&.balls span.active{
+				background:#743434;
+			}
+			&.strikes span.active{
+				background:#2C7E2C;
+			}
+			&.outs span.active{
+				background:#B1B117;
+			}
+		}
+	}
+
+  	.current-inning{
+	  span.inning-status{
+		color:#41698A;
+	  }
+	}
+
+	table.linescore{
+		margin-bottom:5px;
+
+		tbody {
+			tr:first-child {
+				background: #074B83;
+			}
+		}
+		td, th{
+			padding:0px 3px !important;
+		}
+	}
+}
+
+#background-image{
+	position:absolute;
+	.opacity(0.07);
+	width:100%;
+	height:100%;
+}
+
+
+#dashboard{
+	padding:0px 10px;
+	border:15px solid #1A578A;
+	border-color:#0E538B;
+	height:100%;
+	max-height:100%;
+	overflow:hidden;
+}
+
+#left-column{
+	#standings{
+		height:20vh;
+	}
+	#schedule{
+		height:47vh;
+		border-top:2px solid #1A578A;
+	}
+}
+#right-column{
+	border-left:5px solid #1A578A;
+	height:75vh;
+
+	#batters{
+		height:35vh;
+	}
+	#pitchers{
+		height:37vh;
+		margin-top:10px;
+		border-top:2px solid #1A578A;
+	}
+}
+
+table{
+	tr{
+		th{
+		  border:none !important;
+		  color:#EEE;
+		}
+		td{
+		  border:none !important;
+			padding:2px 5px !important;
+		}
+	}
+}
+
+.table-fixed thead, .table-fixed thead tr, .table-fixed thead th, .table-fixed tbody, .table-fixed tbody tr, .table-fixed tbody td {
+  display: block;
+}
+.table-fixed thead, .table-fixed thead tr {
+  //width: 98%;
+}
+.table-fixed thead th, .table-fixed tbody td {
+  //min-height: 30px;
+  display: block;
+  float: left;
+}
+.table-fixed tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.table-fixed-sched tbody {
+  max-height: 47vh;
+  overflow-y: auto;
+}
+.table-fixed-batter tbody {
+  height:31vh;
+  overflow-y: auto;
+}
+.table-fixed-pitcher tbody {
+  height:30vh;
+  overflow-y: auto;
+}
+.table-fixed-stand tbody {
+  height:15vh;
+  overflow-y: auto;
+}
+
+.table-hover tbody tr:hover td {
+  background-color: #266497;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "DodgerDash",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Lukeas14/DodgerDash",
+  "authors": [
+    "Justin Lucas <Lukeas14@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "react": "~0.13.2",
+    "moment": "~2.10.2",
+    "lodash": "~3.8.0",
+    "classnames": "~2.1.1"
+  }
+}

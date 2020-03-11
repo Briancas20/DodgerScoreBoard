@@ -1,2 +1,2 @@
-# DodgerScoreBoard
-Cool little board to keep track of the scores 
+# DodgerDash
+Los Angeles Dodgers Dashboard
