@@ -20,7 +20,7 @@
   "dependencies": {
     "bunyan": "^1.4.0",
     "csv": "^0.4.2",
-    "express": "^4.12.3",
+    "express": "^4.17.3",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
     "gulp-less": "^3.0.3",
